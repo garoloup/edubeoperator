@@ -1,0 +1,15 @@
+#Possbility 1
+
+# add_library(Stack STATIC Stack.cpp)
+# target_include_directories(Stack PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+#Possibility 2
+add_library(Stack)
+
+target_sources(Stack
+    PRIVATE
+        Stack.cpp
+    PUBLIC
+        FILE_SET HEADERS
+        FILES Stack.h
+)

@@ -3,10 +3,11 @@
 
 int main() {
     Stack s;
-    int i=0;
+    int i=30;
     s.push(10);
     s.push(20);
-    s << 30; // Using overloaded operator to push 30
+    s << 25; // Using overloaded operator to push 25
+    s << i; // Using overloaded operator to push 30
 
     std::cout << "Popped value: " << s.pop() << std::endl; // Should print 30
     std::cout << "Popped value: " << s.pop() << std::endl; // Should print 20

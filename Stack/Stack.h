@@ -7,7 +7,7 @@ class Stack {
     public:
         Stack(void) { SP = 0; }
     void push(int value);
-    int pop(void) {
-         return stackstore[--SP];
-     }
+    int pop(void);
+    Stack& operator<<(int value);
+    Stack& operator>>(int& value);
 };
